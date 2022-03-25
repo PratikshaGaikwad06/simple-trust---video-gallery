@@ -1,142 +1,80 @@
-
-
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: sans-serif;
+html{
+  box-sizing: border-box;
+  font-size: 62.5%;
 }
 
-.slider{
-	position: relative;
-	width: 100%;
-	background: #2c3e50; /* darckblue */
-}
-.myslide{
-	height: 655px;
-	display: none;
-	overflow: hidden;
+body{
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.prev, .next{
-	position: absolute;
-	top: 50%;
-	transform: translate(0, -50%);
-	font-size: 50px;
-	padding: 15px;
-	cursor: pointer;
-	color: #fff;
-	transition: 0.1s;
-	user-select: none;
-}
-.prev:hover, .next:hover{
-	color: green; /* blue */
-}
-.next{
-	right: 0;
-}
-.dotsbox{
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%);
-	bottom: 20px;
-	cursor: pointer;
-}
-.dot{
-	display: inline-block;
-	width: 15px;
-	height: 15px;
-	border: 3px solid #fff;
-	border-radius: 50%;
-	margin: 0 10px;
-	cursor: pointer;
+.grid{
+  display: grid;
+  width: 114em;
+  grid-gap:6rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+  align-items: start;
 }
 
-/* javascript */
-.active, .dot:hover{
-	border-color: green; /* green */
+.grid-item{
+  background-color: #fff;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  box-shadow: 0 3rem 6rem rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: 0.2s;
 }
-/* /javascript */
-
-/* muslide add fade */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+.card{
+  width: 100%;
 }
 
-@-webkit-keyframes fade {
-  from {opacity: 0.8}
-  to {opacity: 1}
+.grid-item:hover{
+  transform: translateY(-0.5%);
+  box-shadow: 0 4rem 8rem rgba(0,0,0,0.5);
 }
 
-@keyframes fade {
-  from {opacity: 0.8}
-  to {opacity: 1}
+.card-img{
+  display: block;
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
 }
-/* /muslide add fade */
 
-@-webkit-keyframes posi {
-  from {left: 25%;}
-  to {left: 15%;}
+.card-content{
+  padding: 1rem;
+}
+
+.card-text{
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.7;
+  color: #3d3d3d;
+  margin-bottom: 2.5rem;
+}
+
+.video{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.video iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 
-@keyframes posi {
-  from {left: 25%;}
-  to {left: 15%;}
+@media only screen and (max-width: 60em){
+  body{
+    padding: 3rem;
+  }
+  .grid{
+    grid-gap: 3rem;
+  }
 }
-
-img{
-	transform: scale(1.5, 1.5);
-	-webkit-animation-name: zoomin;
-  	-webkit-animation-duration: 40s;
-  	animation-name: zoomin;
-  	animation-duration: 40s;
-}
-@-webkit-keyframes zoomin {
-  from {transform: scale(1, 1);}
-  to {transform: scale(1.5, 1.5);}
-}
-
-
-@keyframes zoomin {
-  from {transform: scale(1, 1);}
-  to {transform: scale(1.5, 1.5);}
-}
-
-@media screen and (max-width: 800px){
-	.myslide{
-		height: 500px;
-	}
-
-	@-webkit-keyframes posi2 {
-	  from {top: 35%;}
-	  to {top: 50%;}
-	}
-
-
-	@keyframes posi2 {
-	  from {top: 35%;}
-	  to {top: 50%;}
-	}
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
