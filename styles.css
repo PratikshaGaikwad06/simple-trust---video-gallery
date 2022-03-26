@@ -71,7 +71,7 @@ body {
 
 @media only screen and (max-width: 60rem) {
   body {
-    padding: 3rem;
+    padding: 1rem;
   }
   .grid {
     grid-gap: 3rem;

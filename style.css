@@ -93,9 +93,17 @@ a:active {
   background: #262222;
 }
 
-@media (max-width: 368px){
+@media (max-width: 330px) and (min-width:50px) {
   .donate-btn a{
-    padding: 15px;
+    padding: 15px 14px 14px 15px;
+    margin: 0px 0px 0px 0px;
+    font-size: x-small;
+  }
+  body{
+    width: 100%;
+  }
+  html{
+    font-size: 45.5%;
   }
 }
 
